@@ -1,0 +1,9 @@
+body {
+    @include fontSize(25);
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+nav {
+    @include fontSize(30);
+}
