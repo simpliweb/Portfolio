@@ -1,0 +1,46 @@
+#about {
+    h2 {
+        text-align: center;
+    }
+
+    .aboutMeDetails {
+        display: flex;
+    }
+
+    p {
+        span {
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #e686fb;
+                }
+            }
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 20px;
+
+        li {            
+            list-style: none;
+            padding: 20px;
+
+            a {
+                    text-decoration: none;
+                    color: inherit;
+            
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: #e686fb;
+                    }
+                }
+        }
+    }
+}

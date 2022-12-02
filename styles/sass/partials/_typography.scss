@@ -2,6 +2,7 @@ body {
     @include fontSize(25);
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 0.5mm;
 }
 
 nav {

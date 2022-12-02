@@ -283,6 +283,7 @@ body {
   font-size: 1.25rem;
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
+  letter-spacing: 0.5mm;
 }
 
 nav {
@@ -292,30 +293,41 @@ nav {
 
 nav {
   color: #e6fff8;
-  position: fixed;
   top: 0;
   z-index: 10;
   width: 100%;
   margin-bottom: 30px;
-  overflow: hidden;
+  display: block;
 }
-nav li {
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+nav ul li {
   list-style: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-nav li:hover, nav li:focus, nav li:active {
-  color: #cefff0;
+nav ul li:hover, nav ul li:focus, nav ul li:active {
+  color: #e686fb;
   font-weight: 700;
-  text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
 }
-nav li a {
+nav ul li a {
   text-decoration: none;
   color: inherit;
-  display: block;
-  float: right;
   padding: 10px;
+}
+
+header {
+  min-height: 90vh;
+}
+header section {
+  margin-top: 100px;
+}
+header section h1 span {
+  display: block;
 }
 
 body {
@@ -330,4 +342,40 @@ body {
 
 header {
   padding-top: 100px;
+}
+
+#about h2 {
+  text-align: center;
+}
+#about .aboutMeDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#about p span a {
+  text-decoration: none;
+  color: inherit;
+}
+#about p span a:hover, #about p span a:focus, #about p span a:active {
+  color: #e686fb;
+}
+#about ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 20px;
+}
+#about ul li {
+  list-style: none;
+  padding: 20px;
+}
+#about ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+#about ul li a:hover, #about ul li a:focus, #about ul li a:active {
+  color: #e686fb;
 }

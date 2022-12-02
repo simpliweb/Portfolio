@@ -1,29 +1,30 @@
 nav {
-    color: #e6fff8;
-    position: fixed;
+    color: #e6fff8;    
     top: 0;    
     z-index: 10;
     width: 100%;
     margin-bottom: 30px;
-    overflow: hidden;
+    display: block;
 
-    li {
-        list-style: none;
-        justify-content: space-between;
+    ul {               
+        display: flex;
+        justify-content: flex-end;
 
-        &:hover,
-        &:focus,
-        &:active {
-            color: #cefff0;
-            font-weight: 700;
-            text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            float: right;
-            padding: 10px;
-        }        
-    }    
+        li {
+            list-style: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #e686fb;
+                font-weight: 700;
+                // text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000, 2px 2px 0 #000000;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+                padding: 10px;
+            }        
+        }    
+    }
 }
