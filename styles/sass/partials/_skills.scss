@@ -1,0 +1,28 @@
+.skillSection {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        li {
+            list-style: none;
+            display: flex;
+            // flex-basis: 25%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 6%;
+            // padding: 5%;
+
+            i {
+                @include fontSize(70);
+                margin: auto;
+                padding-bottom: 20px;
+            }
+            span {
+                @include fontSize(20);
+            }
+        }
+
+        
+    }
+}

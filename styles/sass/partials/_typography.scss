@@ -8,3 +8,12 @@ body {
 nav {
     @include fontSize(30);
 }
+
+h1 {
+    @include fontSize(70);
+}
+
+h2 {
+    text-align: center;
+    @include fontSize(45);
+}

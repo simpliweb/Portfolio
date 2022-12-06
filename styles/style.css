@@ -291,6 +291,17 @@ nav {
   font-size: 1.5rem;
 }
 
+h1 {
+  font-size: 70px;
+  font-size: 3.5rem;
+}
+
+h2 {
+  text-align: center;
+  font-size: 45px;
+  font-size: 2.25rem;
+}
+
 nav {
   color: #e6fff8;
   top: 0;
@@ -320,9 +331,6 @@ nav ul li a {
   padding: 10px;
 }
 
-header {
-  min-height: 90vh;
-}
 header section {
   margin-top: 100px;
 }
@@ -336,7 +344,7 @@ body {
 }
 
 .wrapper {
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -344,9 +352,11 @@ header {
   padding-top: 100px;
 }
 
-#about h2 {
-  text-align: center;
+header, section {
+  min-height: 90vh;
+  margin-top: 100px;
 }
+
 #about .aboutMeDetails {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -378,4 +388,39 @@ header {
 }
 #about ul li a:hover, #about ul li a:focus, #about ul li a:active {
   color: #e686fb;
+}
+
+.skillSection ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.skillSection ul li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 6%;
+}
+.skillSection ul li i {
+  font-size: 70px;
+  font-size: 3.5rem;
+  margin: auto;
+  padding-bottom: 20px;
+}
+.skillSection ul li span {
+  font-size: 20px;
+  font-size: 1rem;
 }
