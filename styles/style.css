@@ -302,6 +302,10 @@ h2 {
   font-size: 2.25rem;
 }
 
+p {
+  line-height: 40px;
+}
+
 nav {
   color: #e6fff8;
   top: 0;
@@ -339,8 +343,26 @@ header section h1 span {
 }
 
 body {
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
   background-color: #263E31;
   color: #e6fff8;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
@@ -357,17 +379,32 @@ header, section {
   margin-top: 100px;
 }
 
+#about {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  padding: 30px;
+}
 #about .aboutMeDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-#about p span a {
+#about .aboutMeDetails .aboutPhoto img {
+  width: 250px;
+  height: 550px;
+}
+#about .aboutMeDetails .aboutInfo p {
+  margin: 0 0 0 30px;
+}
+#about .aboutMeDetails .aboutInfo p .calendlyLink {
   text-decoration: none;
   color: inherit;
 }
-#about p span a:hover, #about p span a:focus, #about p span a:active {
+#about .aboutMeDetails .aboutInfo p .calendlyLink:hover, #about .aboutMeDetails .aboutInfo p .calendlyLink:focus, #about .aboutMeDetails .aboutInfo p .calendlyLink:active {
   color: #e686fb;
+}
+#about .aboutMeDetails .aboutInfo .p2, #about .aboutMeDetails .aboutInfo .p3 {
+  margin-top: 30px;
 }
 #about ul {
   display: -webkit-box;
@@ -376,7 +413,7 @@ header, section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-right: 20px;
+  margin: 40px 0 0 20px;
 }
 #about ul li {
   list-style: none;
@@ -390,17 +427,18 @@ header, section {
   color: #e686fb;
 }
 
-.skillSection ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+.skill {
+  margin-top: 20px;
 }
-.skillSection ul li {
+.skill .skillList {
+  display: grid;
+  grid-template-rows: 180px 100px;
+  grid-template-columns: repeat(6, 200px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.skill .skillList .eachSkill {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,18 +447,32 @@ header, section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin: 6%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0px;
 }
-.skillSection ul li i {
+.skill .skillList .eachSkill:hover .hidden, .skill .skillList .eachSkill:focus .hidden, .skill .skillList .eachSkill:active .hidden {
+  display: block;
+  color: #e686fb;
+}
+.skill .skillList .eachSkill i {
   font-size: 70px;
   font-size: 3.5rem;
-  margin: auto;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-.skillSection ul li span {
+.skill .skillList .eachSkill i:hover, .skill .skillList .eachSkill i:focus, .skill .skillList .eachSkill i:active {
+  font-size: 80px;
+  font-size: 4rem;
+  color: #e686fb;
+}
+.skill .skillList .eachSkill .hidden {
   font-size: 20px;
   font-size: 1rem;
+  display: none;
 }

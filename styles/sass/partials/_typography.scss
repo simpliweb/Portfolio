@@ -17,3 +17,7 @@ h2 {
     text-align: center;
     @include fontSize(45);
 }
+
+p {
+    line-height: 40px;
+}

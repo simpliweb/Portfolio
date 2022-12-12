@@ -1,28 +1,44 @@
 #about {   
+    transition: 0.3s ease;
+    padding: 30px;
 
-    .aboutMeDetails {
+    .aboutMeDetails {      
         display: flex;
-    }
 
-    p {
-        span {
-            a {
-                text-decoration: none;
-                color: inherit;
+        .aboutPhoto {
+            img {
+                width: 250px;
+                height: 550px;
+            }
+        }
 
-                &:hover,
-                &:focus,
-                &:active {
-                    color: #e686fb;
+        .aboutInfo {
+            p {
+                margin: 0 0 0 30px;
+        
+                .calendlyLink {
+                    text-decoration: none;
+                    color: inherit;
+        
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: #e686fb;
+                    }
                 }
+            }
+
+            .p2, .p3 {
+                margin-top: 30px;
             }
         }
     }
 
-    ul {
+
+    ul {        
         display: flex;
         justify-content: flex-end;
-        margin-right: 20px;
+        margin: 40px 0 0 20px;
 
         li {            
             list-style: none;
@@ -38,6 +54,53 @@
                         color: #e686fb;
                     }
                 }
+        }
+    }
+}
+
+// #about ENDS ---------------------
+
+.skill {
+    margin-top: 20px;
+
+    .skillList {
+        display: grid;
+        grid-template-rows: 180px 100px;
+        grid-template-columns: repeat(6, 200px);
+        justify-content: center;
+
+        .eachSkill {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0px;
+            // transition: all 1s;
+
+            &:hover .hidden,
+            &:focus .hidden,
+            &:active .hidden {                
+                display: block;
+                color: #e686fb;
+            }
+
+            i {
+                @include fontSize(70);
+                padding-bottom: 10px;
+                transition: all 0.3s;
+                &:hover,
+                &:focus,
+                &:active {    
+                    @include fontSize(80);
+                    color: #e686fb;                    
+                }
+            }
+
+            .hidden {
+                @include fontSize(20);
+                display: none;                                
+            }
         }
     }
 }
