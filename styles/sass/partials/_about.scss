@@ -62,7 +62,7 @@
 
 // #about ENDS ---------------------
 
-.skill {
+.skill {    
     margin-top: 20px;
 
     .skillList {
@@ -72,13 +72,13 @@
         justify-content: center;
 
         .eachSkill {
+            cursor: pointer;
             list-style: none;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding-top: 0px;
-            // transition: all 1s;
 
             &:hover .hidden,
             &:focus .hidden,

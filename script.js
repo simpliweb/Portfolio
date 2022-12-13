@@ -14,3 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 }) // END hamburger nav
+
+const image = document.querySelectorAll('.image');
+console.log(image)
+
+const overlay = document.querySelectorAll('.overlay');
+console.log(overlay)
+
+for (let i = 0; i < image.length; i++) {
+    image[i].addEventListener('mouseover', () => {
+        overlay[i].style.display="block";
+    })
+
+    overlay[i].addEventListener('mouseout', () => {
+        overlay[i].style.display="none";
+    })
+} 

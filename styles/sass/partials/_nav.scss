@@ -31,15 +31,17 @@
 
 .navBar {
     .menuOpen {
+            cursor: pointer;
             display: none;
+            background-color: transparent;
+            border: transparent;
+            color: #ffff;
 
             &:hover,
             &:focus,
             &:active {
                 @include fontSize(55);
-                background-color: #e686fb;
-                border: #e686fb 2px;
-                border-radius: 5%;
+                color: #e686fb;
             }
 
             i {

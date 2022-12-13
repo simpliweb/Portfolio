@@ -5,13 +5,90 @@
             display: none;
             }
         }
-    }
+    } // END .mainNav
     .navBar {
         .menuOpen {
             @include fontSize(50);
             display: block;
-            float: right;
-            
+            float: right;            
             }
+    }// END .navBar
+// END NAV ------------------------------
+    header {
+        section {
+            .pointer {
+                a {
+                    i {
+                        margin: 0 0 0 -150px;
+                    }
+                }
+            }
+        }
     }
-}
+// END HEADER ------------------------------
+    #about {
+        .aboutMeDetails {
+            flex-direction: column;
+            .aboutPhoto {
+                    display: center;
+                    margin: 0 auto;
+                    img {
+                        width: 400px;
+                        height: 700px;
+                        margin-bottom: 50px;
+                    }
+            }
+        } //END .aboutMeDetails
+
+        .skill {
+            .skillList {
+                display: grid;
+                grid-template-rows: 100px 180px;
+                grid-template-columns: repeat(4, 200px);
+                justify-content: center;
+            }
+        } //END .skill
+    } // END #about
+// END ABOUT ---------------------------------
+    #projects {
+        .eachProject {            
+            .firstProject, .secondProject {
+                position: relative;
+                margin: 0 auto;
+                
+                .firstMockupImg, .secondMockupImg {                  
+                    img {
+                        cursor: pointer;
+                        align-items: center;
+                        display: center;
+                        margin: 0 auto;
+                        width: 705px;
+                    }                    
+                }
+                .overlay {
+                    cursor: pointer;
+                    opacity: 1;
+                    position: absolute;
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
+                    background-color: rgba(0, 0, 0, 0.9);
+                    z-index: 2;
+                    transition: 0.3s ease;
+                    padding: 70px;
+                    border-radius: 12px;
+                }               
+            } // END .firstProject, .secondProject
+
+            .secondProject {
+                margin-top: 100px;
+            }
+        } // END .eachProject
+    } // END. #projects
+} 
+
+
+
+// @media screen and (max-width: 480px) {
+// }
