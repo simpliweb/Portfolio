@@ -7,6 +7,18 @@ body {
 
 nav {
     @include fontSize(30);
+
+    ul {
+        li {
+            &:hover,
+            &:focus,
+            &:active {
+                color: #e686fb;
+                font-weight: 700;
+                text-decoration-line: underline;
+            }
+        }
+    }
 }
 
 h1 {
@@ -16,8 +28,17 @@ h1 {
 h2 {
     text-align: center;
     @include fontSize(45);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: #e686fb;
+        font-weight: 700;
+        text-decoration-line: underline; 
+    }
 }
 
-p {
-    line-height: 40px;
+h3 {
+    @include fontSize(35);
+    margin: 0;
 }
