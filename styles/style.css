@@ -298,6 +298,10 @@ nav ul li:hover, nav ul li:focus, nav ul li:active {
 }
 
 h1 {
+  font-size: 100px;
+  font-size: 5rem;
+}
+h1 span {
   font-size: 70px;
   font-size: 3.5rem;
 }
@@ -306,6 +310,7 @@ h2 {
   text-align: center;
   font-size: 45px;
   font-size: 2.25rem;
+  margin-bottom: 40px;
 }
 h2:hover, h2:focus, h2:active {
   color: #e686fb;
@@ -350,10 +355,46 @@ nav ul li a {
 }
 
 header section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 100px;
+  min-height: 80vh;
+}
+header section h1 {
+  -webkit-transition: color 1s ease-out 100ms;
+  transition: color 1s ease-out 100ms;
+}
+header section h1:hover, header section h1:focus, header section h1:active {
+  color: #e686fb;
 }
 header section h1 span {
   display: block;
+  color: white;
+}
+header section .pointer {
+  font-size: 80px;
+  font-size: 4rem;
+}
+header section .pointer a i {
+  margin: 0 0 0 150px;
+  position: absolute;
+  bottom: 0;
+  color: #d7ff49;
+  margin-right: 0.5rem;
+  animation: blink s steps(5, start) infinite;
+  -webkit-animation: blink 2s steps(5, start) infinite;
+}
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }
 
 body {
@@ -384,18 +425,10 @@ body {
   margin: 0 auto;
 }
 
-header {
-  padding-top: 100px;
-}
-
-header, section {
-  min-height: 90vh;
-  margin-top: 100px;
-}
-
 #about {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
+  margin-top: 100px;
   padding: 30px;
 }
 #about .aboutMeDetails {
@@ -492,35 +525,38 @@ header, section {
   display: none;
 }
 
-.eachProject {
+#projects {
+  margin-top: 100px;
+}
+#projects .eachProject {
   padding-bottom: 100px;
 }
-.eachProject .firstProject {
+#projects .eachProject .firstProject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.eachProject .firstProject .firstMockupImg {
+#projects .eachProject .firstProject .firstMockupImg {
   width: 50%;
 }
-.eachProject .firstProject .firstMockupImg img {
+#projects .eachProject .firstProject .firstMockupImg img {
   border-radius: 3%;
   width: 600px;
 }
-.eachProject .firstProject .projectInfo {
+#projects .eachProject .firstProject .projectInfo {
   margin: 50px 0 0 30px;
 }
-.eachProject .firstProject .projectInfo h3 {
+#projects .eachProject .firstProject .projectInfo h3 {
   margin: 0;
   display: block;
 }
-.eachProject .firstProject .projectInfo ul {
+#projects .eachProject .firstProject .projectInfo ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
 }
-.eachProject .firstProject .projectInfo ul li {
+#projects .eachProject .firstProject .projectInfo ul li {
   list-style: none;
   margin-left: 10px;
   color: #67fcb9;
@@ -528,7 +564,7 @@ header, section {
   padding: 0 3px;
   border-radius: 3px;
 }
-.eachProject .firstProject .projectInfo button {
+#projects .eachProject .firstProject .projectInfo button {
   font-size: 35px;
   font-size: 1.75rem;
   background-color: #e587c6;
@@ -537,20 +573,20 @@ header, section {
   float: right;
   margin: 15px 0 0 15px;
 }
-.eachProject .firstProject .projectInfo button:hover, .eachProject .firstProject .projectInfo button:focus, .eachProject .firstProject .projectInfo button:active {
+#projects .eachProject .firstProject .projectInfo button:hover, #projects .eachProject .firstProject .projectInfo button:focus, #projects .eachProject .firstProject .projectInfo button:active {
   background-color: #d7ff49;
 }
-.eachProject .firstProject .projectInfo button a {
+#projects .eachProject .firstProject .projectInfo button a {
   text-decoration: none;
   color: #67fcb9;
   background-color: #e587c6;
 }
-.eachProject .firstProject .projectInfo button a:hover, .eachProject .firstProject .projectInfo button a:focus, .eachProject .firstProject .projectInfo button a:active {
+#projects .eachProject .firstProject .projectInfo button a:hover, #projects .eachProject .firstProject .projectInfo button a:focus, #projects .eachProject .firstProject .projectInfo button a:active {
   font-weight: 700;
   color: #263E31;
   background-color: #d7ff49;
 }
-.eachProject .secondProject {
+#projects .eachProject .secondProject {
   margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -560,24 +596,24 @@ header, section {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.eachProject .secondProject .secondMockupImg img {
+#projects .eachProject .secondProject .secondMockupImg img {
   border-radius: 3%;
   width: 600px;
 }
-.eachProject .secondProject .projectInfo {
+#projects .eachProject .secondProject .projectInfo {
   margin: 30px 40px 0 20px;
 }
-.eachProject .secondProject .projectInfo h3 {
+#projects .eachProject .secondProject .projectInfo h3 {
   margin: 0;
   display: block;
 }
-.eachProject .secondProject .projectInfo ul {
+#projects .eachProject .secondProject .projectInfo ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
 }
-.eachProject .secondProject .projectInfo ul li {
+#projects .eachProject .secondProject .projectInfo ul li {
   list-style: none;
   margin-left: 10px;
   color: #67fcb9;
@@ -585,7 +621,7 @@ header, section {
   padding: 0 3px;
   border-radius: 3px;
 }
-.eachProject .secondProject .projectInfo button {
+#projects .eachProject .secondProject .projectInfo button {
   font-size: 35px;
   font-size: 1.75rem;
   background-color: #e587c6;
@@ -594,15 +630,15 @@ header, section {
   float: right;
   margin: 25px 15px 0 0;
 }
-.eachProject .secondProject .projectInfo button:hover, .eachProject .secondProject .projectInfo button:focus, .eachProject .secondProject .projectInfo button:active {
+#projects .eachProject .secondProject .projectInfo button:hover, #projects .eachProject .secondProject .projectInfo button:focus, #projects .eachProject .secondProject .projectInfo button:active {
   background-color: #d7ff49;
 }
-.eachProject .secondProject .projectInfo button a {
+#projects .eachProject .secondProject .projectInfo button a {
   text-decoration: none;
   color: #67fcb9;
   background-color: #e587c6;
 }
-.eachProject .secondProject .projectInfo button a:hover, .eachProject .secondProject .projectInfo button a:focus, .eachProject .secondProject .projectInfo button a:active {
+#projects .eachProject .secondProject .projectInfo button a:hover, #projects .eachProject .secondProject .projectInfo button a:focus, #projects .eachProject .secondProject .projectInfo button a:active {
   font-weight: 700;
   color: #263E31;
   background-color: #d7ff49;

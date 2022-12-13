@@ -22,12 +22,17 @@ nav {
 }
 
 h1 {
-    @include fontSize(70);
+    @include fontSize(100);
+
+    span {
+        @include fontSize(70);
+    }
 }
 
 h2 {
     text-align: center;
     @include fontSize(45);
+    margin-bottom: 40px;
 
     &:hover,
     &:focus,
