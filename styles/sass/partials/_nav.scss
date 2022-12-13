@@ -1,4 +1,4 @@
-nav {
+.mainNav {
     color: #e6fff8;    
     top: 0;    
     z-index: 10;
@@ -25,5 +25,94 @@ nav {
                 padding: 10px;
             }        
         }    
+    }
+}
+
+
+.navBar {
+    .menuOpen {
+            display: none;
+
+            &:hover,
+            &:focus,
+            &:active {
+                @include fontSize(55);
+                background-color: #e686fb;
+                border: #e686fb 2px;
+                border-radius: 5%;
+            }
+
+            i {
+                float: right;
+            }
+        }
+}
+
+.slideOutNav {
+    background-color: #4af7d4;
+    min-height: 100vh;
+    max-width: 1024px;
+    left: -1024px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include fontSize(30);
+    line-height: 45px;
+    width: 100%;
+    padding: 50px;
+    transition: 0.3s;
+
+    &.open {
+        left: 0;
+    }
+
+
+    li {
+        @include fontSize(60);
+        list-style: none;     
+        text-align: center;   
+        margin: 50px;
+        &:hover,
+        &:focus {
+            color: #e686fb;
+        }
+    }
+
+    .menuOpen {
+        display: none;     
+    }
+
+
+    .menuClose {
+        background-color: transparent;
+        border: transparent;
+        display: block;
+        width: 100%;
+        text-align: right;
+        @include fontSize(60);
+        transition: 0.3s;
+            &:hover,
+            &:focus,
+            &:active {
+                color: #e686fb;
+            }
+    }
+
+    .slideOutMenu {        
+        // span {
+        //     display: none;
+        // }
+        a {
+            text-decoration: none;
+            color: #263E31;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #e686fb;
+            }
+        }
     }
 }

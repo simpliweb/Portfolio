@@ -325,7 +325,7 @@ h3 {
   margin: 0;
 }
 
-nav {
+.mainNav {
   color: #e6fff8;
   top: 0;
   z-index: 10;
@@ -333,7 +333,7 @@ nav {
   margin-bottom: 30px;
   display: block;
 }
-nav ul {
+.mainNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,17 +341,87 @@ nav ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-nav ul li {
+.mainNav ul li {
   list-style: none;
 }
-nav ul li:hover, nav ul li:focus, nav ul li:active {
+.mainNav ul li:hover, .mainNav ul li:focus, .mainNav ul li:active {
   color: #e686fb;
   font-weight: 700;
 }
-nav ul li a {
+.mainNav ul li a {
   text-decoration: none;
   color: inherit;
   padding: 10px;
+}
+
+.navBar .menuOpen {
+  display: none;
+}
+.navBar .menuOpen:hover, .navBar .menuOpen:focus, .navBar .menuOpen:active {
+  font-size: 55px;
+  font-size: 2.75rem;
+  background-color: #e686fb;
+  border: #e686fb 2px;
+  border-radius: 5%;
+}
+.navBar .menuOpen i {
+  float: right;
+}
+
+.slideOutNav {
+  background-color: #4af7d4;
+  min-height: 100vh;
+  max-width: 1024px;
+  left: -1024px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-size: 1.5rem;
+  line-height: 45px;
+  width: 100%;
+  padding: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutNav.open {
+  left: 0;
+}
+.slideOutNav li {
+  font-size: 60px;
+  font-size: 3rem;
+  list-style: none;
+  text-align: center;
+  margin: 50px;
+}
+.slideOutNav li:hover, .slideOutNav li:focus {
+  color: #e686fb;
+}
+.slideOutNav .menuOpen {
+  display: none;
+}
+.slideOutNav .menuClose {
+  background-color: transparent;
+  border: transparent;
+  display: block;
+  width: 100%;
+  text-align: right;
+  font-size: 60px;
+  font-size: 3rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutNav .menuClose:hover, .slideOutNav .menuClose:focus, .slideOutNav .menuClose:active {
+  color: #e686fb;
+}
+.slideOutNav .slideOutMenu a {
+  text-decoration: none;
+  color: #263E31;
+}
+.slideOutNav .slideOutMenu a:hover, .slideOutNav .slideOutMenu a:focus, .slideOutNav .slideOutMenu a:active {
+  color: #e686fb;
 }
 
 header section {
@@ -642,4 +712,16 @@ body {
   font-weight: 700;
   color: #263E31;
   background-color: #d7ff49;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainNav ul li {
+    display: none;
+  }
+  .navBar .menuOpen {
+    font-size: 50px;
+    font-size: 2.5rem;
+    display: block;
+    float: right;
+  }
 }

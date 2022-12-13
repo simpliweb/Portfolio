@@ -10,23 +10,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./script.js"></script>
+
     <title>Jie eun lee portfolio</title>
 </head>
 <body>
+    <a href="#mainContent" class="skipLink">Skip to the main content.</a>
 
-    <nav class="wrapper">
-        <ul>
-            <li>
-                <a href="#home">home</a>                        
-            </li>
-            <li>
-                <a href="#about">about</a>
-            </li>
-            <li>
-                <a href="#projects">projects</a>
-            </li>
-        </ul>
-    </nav>
+    <div class="mainNav">
+        <nav class="wrapper">
+            <ul>
+                <li>
+                    <a href="#home">home</a>                        
+                </li>
+                <li>
+                    <a href="#about">about</a>
+                </li>
+                <li>
+                    <a href="#projects">projects</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="navBar">
+        <div class="wrapper">
+            <nav class="topNav">
+                <button class="menuOpen">
+                    <i class="fa-sharp fa-solid fa-burger" alt="three white lines for hamburger menu for nav bar"></i>
+                </button>
+                
+            </nav> <!-- END .topNav-->
+        </div> <!-- END .wrappper -->
+    
+        <div class="slideOutNav">    
+            <button class="menuClose">
+                <i class="fa-solid fa-xmark" alt="x for closing hamburger menu for nav bar"></i>
+            </button>
+    
+            <nav>
+                <ul class="slideOutMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">projects</a></li
+                </ul>
+            </nav>
+        </div> <!-- END .slideOutNav -->
+    </div> <!-- END .navBar -->
 
     <header class="wrapper">
         <section id="home">    

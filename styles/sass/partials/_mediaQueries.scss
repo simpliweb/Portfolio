@@ -1,0 +1,17 @@
+@media screen and (max-width: 1024px) {
+    .mainNav {
+        ul {
+            li {
+            display: none;
+            }
+        }
+    }
+    .navBar {
+        .menuOpen {
+            @include fontSize(50);
+            display: block;
+            float: right;
+            
+            }
+    }
+}
