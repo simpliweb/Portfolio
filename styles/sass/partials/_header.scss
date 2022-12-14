@@ -5,15 +5,12 @@ header {
         margin-top: 100px;
         min-height: 80vh;
         h1 {
-            transition: color 1s ease-out 100ms;           
-
+            transition: color 1s ease-out 100ms;          
             &:hover,
             &:focus,
             &:active {
-                color: #e686fb;
-                // #FF1493;                
+                color: #e686fb;          
             }
-
             span {
                 display: block;
                 color: #ffff;

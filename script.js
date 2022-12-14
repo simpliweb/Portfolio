@@ -29,4 +29,18 @@ for (let i = 0; i < image.length; i++) {
     overlay[i].addEventListener('mouseout', () => {
         overlay[i].style.display="none";
     })
-} 
+} // END overlay for media query max width 1024px on project images
+
+const button = document.querySelector('.aboutButton');
+console.log(button)
+
+const myInfo = document.querySelector('.aboutInfo');
+console.log(myInfo)
+
+button.addEventListener('click', () => {
+    myInfo.style.display="block";
+})
+
+myInfo.addEventListener('click', () => {
+    myInfo.style.display="none";
+})

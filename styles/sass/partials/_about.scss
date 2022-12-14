@@ -12,7 +12,11 @@
                 height: 550px;
             }
         }
-
+        .aboutMeInfo {
+            button {
+                display: none;
+            }
+        }
         .aboutInfo {
             p {
                 margin: 0 0 0 30px;
