@@ -377,7 +377,7 @@ button {
 
 .slideOutNav {
   background-color: #4af7d4;
-  min-height: 100vh;
+  min-height: 10vh;
   max-width: 1024px;
   left: -1024px;
   position: fixed;
@@ -385,11 +385,11 @@ button {
   z-index: 20;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 30px;
-  font-size: 1.5rem;
-  line-height: 45px;
+  font-size: 25px;
+  font-size: 1.25rem;
+  line-height: 20px;
   width: 100%;
-  padding: 50px;
+  padding: 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -397,8 +397,8 @@ button {
   left: 0;
 }
 .slideOutNav li {
-  font-size: 60px;
-  font-size: 3rem;
+  font-size: 50px;
+  font-size: 2.5rem;
   list-style: none;
   text-align: center;
   margin: 50px;
@@ -422,6 +422,9 @@ button {
 }
 .slideOutNav .menuClose:hover, .slideOutNav .menuClose:focus, .slideOutNav .menuClose:active {
   color: #e686fb;
+}
+.slideOutNav .slideOutMenu {
+  padding: 0;
 }
 .slideOutNav .slideOutMenu a {
   text-decoration: none;

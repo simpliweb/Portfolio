@@ -52,7 +52,7 @@
 
 .slideOutNav {
     background-color: #4af7d4;
-    min-height: 100vh;
+    min-height: 10vh;
     max-width: 1024px;
     left: -1024px;
     position: fixed;
@@ -60,10 +60,10 @@
     z-index: 20;
     font-weight: bold;
     text-transform: uppercase;
-    @include fontSize(30);
-    line-height: 45px;
+    @include fontSize(25);
+    line-height: 20px;
     width: 100%;
-    padding: 50px;
+    padding: 30px;
     transition: 0.3s;
 
     &.open {
@@ -72,7 +72,7 @@
 
 
     li {
-        @include fontSize(60);
+        @include fontSize(50);
         list-style: none;     
         text-align: center;   
         margin: 50px;
@@ -102,7 +102,8 @@
             }
     }
 
-    .slideOutMenu {    
+    .slideOutMenu {     
+        padding: 0;       
         a {
             text-decoration: none;
             color: #263E31;
