@@ -38,8 +38,14 @@ header {
                             visibility: hidden;
                         }
                     }
-                }
-            }
-        }          
-    }
-}
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: #e686fb;
+                    }
+                }               
+            } 
+        } // END .pointer         
+    } // END section
+} // END header

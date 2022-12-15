@@ -263,8 +263,9 @@ template {
 }
 
 .skipLink {
-  background-color: #f6a823;
-  color: black;
+  font-weight: 700;
+  background-color: #e686fb;
+  color: #263E31;
   font-size: 1rem;
   padding: 10px 0;
   position: absolute;
@@ -466,6 +467,9 @@ header section .pointer a i {
   to {
     visibility: hidden;
   }
+}
+header section .pointer a i:hover, header section .pointer a i:focus, header section .pointer a i:active {
+  color: #e686fb;
 }
 
 body {
@@ -830,5 +834,72 @@ body {
     width: 480px;
     height: 100vh;
     padding-right: 25px;
+  }
+  #about .skill .skillList {
+    display: grid;
+    grid-template-rows: 70px 50px;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #projects .eachProject .firstProject .firstMockupImg img {
+    width: 450px;
+    margin-left: -63px;
+  }
+  #projects .eachProject .firstProject .overlay {
+    width: 450px;
+    padding: 40px;
+    margin-left: -80px;
+  }
+  #projects .eachProject .firstProject .overlay h3 {
+    font-size: 30px;
+    font-size: 1.5rem;
+  }
+  #projects .eachProject .firstProject .overlay p {
+    display: none;
+  }
+  #projects .eachProject .firstProject .overlay ul {
+    font-size: 20px;
+    font-size: 1rem;
+  }
+  #projects .eachProject .firstProject .overlay ul li {
+    font-size: 20px;
+    font-size: 1rem;
+    padding: 0;
+  }
+  #projects .eachProject .firstProject .overlay button a {
+    font-size: 20px;
+    font-size: 1rem;
+  }
+  #projects .eachProject .secondProject .secondMockupImg img {
+    width: 450px;
+    margin-right: -63px;
+  }
+  #projects .eachProject .secondProject .overlay {
+    width: 450px;
+    padding: 40px;
+    margin-right: -80px;
+  }
+  #projects .eachProject .secondProject .overlay h3 {
+    font-size: 30px;
+    font-size: 1.5rem;
+  }
+  #projects .eachProject .secondProject .overlay p {
+    display: none;
+  }
+  #projects .eachProject .secondProject .overlay ul {
+    font-size: 20px;
+    font-size: 1rem;
+  }
+  #projects .eachProject .secondProject .overlay ul li {
+    font-size: 20px;
+    font-size: 1rem;
+    padding: 0;
+  }
+  #projects .eachProject .secondProject .overlay button a {
+    font-size: 20px;
+    font-size: 1rem;
   }
 }
