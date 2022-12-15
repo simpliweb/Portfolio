@@ -1,3 +1,5 @@
+AOS.init();
+
 document.addEventListener("DOMContentLoaded", () => {
     const openHamburgerMenuButton = document.querySelector('.menuOpen');
 
@@ -22,11 +24,11 @@ const overlay = document.querySelectorAll('.overlay');
 console.log(overlay)
 
 for (let i = 0; i < image.length; i++) {
-    image[i].addEventListener('mouseover', () => {
+    image[i].addEventListener('click', () => {
         overlay[i].style.display="block";
     })
 
-    overlay[i].addEventListener('mouseout', () => {
+    overlay[i].addEventListener('click', () => {
         overlay[i].style.display="none";
     })
 } // END overlay for media query max width 1024px on project images
@@ -43,4 +45,4 @@ button.addEventListener('click', () => {
 
 myInfo.addEventListener('click', () => {
     myInfo.style.display="none";
-})
+}) // END overlay for .aboutButton to show .aboutInfo

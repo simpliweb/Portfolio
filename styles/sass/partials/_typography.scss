@@ -1,6 +1,6 @@
 body {
     @include fontSize(25);
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.5mm;
 }
@@ -46,4 +46,8 @@ h2 {
 h3 {
     @include fontSize(35);
     margin: 0;
+}
+
+button {
+    font-family: inherit;
 }

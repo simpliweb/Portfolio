@@ -7,9 +7,10 @@
     <script src="https://kit.fontawesome.com/0c33a27114.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script defer src="./script.js"></script>
 
     <title>Jie eun lee portfolio</title>
@@ -74,7 +75,7 @@
 
     <main class="wrapper">      
         <section id="about">
-            <div>
+            <div data-aos="fade-up">
                 <h2>About Me</h2>
                 <div class="aboutMeDetails">
                     <div class="aboutPhoto">
@@ -123,7 +124,7 @@
                 
             </div>
 
-            <div class="skill">
+            <div class="skill" data-aos="fade-up">
                 <h2>Skills & tools</h2>
                 <div class="skillList">
                     <div class="eachSkill">
@@ -175,17 +176,17 @@
         </section>
         <!-- ENDS #about Section -->
 
-        <section id="projects">
+        <section id="projects" data-aos="fade-up">
             <h2>Projects</h2>
             <div class="eachProject">                
-                <div class="firstProject">
+                <div class="firstProject" data-aos="fade-up">
                     <div class="firstMockupImg image">
                         <img src="./assets/sophie-project.png" alt="sophie blog page shown in three devices: desktop, tablet, and mobile">
                     </div>
-                    <div class="projectInfo overlay">
+                    <div class="overlay">
                         <h3>It's All About Sophie</h3>
                         <p>A multi-page blog page that is fully responsive across all devices.</p>
-                        <ul>made with: 
+                        <ul>made with:
                             <li>HTML</li>
                             <li>SCSS</li>
                             <li>CSS3</li>
@@ -197,13 +198,13 @@
                         <button>
                             <a href="https://github.com/simpliweb/jieeunLeeProjectOne" target="blank">Git hub</a>
                         </button>
-                    </div>                    
+                    </div>
                 </div>
-                <div class="secondProject">
+                <div class="secondProject" data-aos="fade-up">
                     <div class="secondMockupImg image">
                         <img src="./assets/uglypokemon-project.png" alt="ugly pokemon web app shown in three devices: desktop, tablet, and mobile">
                     </div>
-                    <div class="projectInfo overlay">                    
+                    <div class="overlay">                    
                         <h3>Ugly pokemon</h3>
                         <p>A web application where you can search your favorite pokemon to see their cute image and attributes. You can also click on 'ugly pokemon' button to see random list of "ugly pokemon".
                         </p>
@@ -221,21 +222,6 @@
                         </button>
                     </div>
                 </div>
-                
-                <!-- <div> // two more projects will be added
-                    <h2><a href="" target="blank">project 3</a></h2>
-                    <ul>made with: 
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <button>
-                        <a href="" target="blank">View live</a>
-                    </button>
-                    <button>
-                        <a href="" target="blank">Git hub</a>
-                    </button>
-                </div> -->
             </div>
         </section>
     </main>

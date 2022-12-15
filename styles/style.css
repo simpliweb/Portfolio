@@ -282,7 +282,7 @@ template {
 body {
   font-size: 25px;
   font-size: 1.25rem;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5mm;
 }
@@ -324,6 +324,10 @@ h3 {
   font-size: 35px;
   font-size: 1.75rem;
   margin: 0;
+}
+
+button {
+  font-family: inherit;
 }
 
 .mainNav {
@@ -503,7 +507,7 @@ body {
 #about {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-  margin-top: 100px;
+  margin-top: 200px;
   padding: 30px;
 }
 #about .aboutMeDetails {
@@ -512,7 +516,7 @@ body {
   display: flex;
 }
 #about .aboutMeDetails .aboutPhoto img {
-  width: 250px;
+  width: 300px;
   height: 550px;
 }
 #about .aboutMeDetails .aboutMeInfo button {
@@ -605,15 +609,24 @@ body {
 }
 
 #projects {
-  margin-top: 100px;
+  margin: 200px 0 300px;
 }
 #projects .eachProject {
   padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 #projects .eachProject .firstProject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+#projects .eachProject .firstProject .overlay {
+  padding: 40px;
 }
 #projects .eachProject .firstProject .firstMockupImg {
   width: 50%;
@@ -621,52 +634,12 @@ body {
 #projects .eachProject .firstProject .firstMockupImg img {
   border-radius: 3%;
   width: 600px;
+  height: 325px;
 }
 #projects .eachProject .firstProject .projectInfo {
   margin: 50px 0 0 30px;
 }
-#projects .eachProject .firstProject .projectInfo h3 {
-  margin: 0;
-  display: block;
-}
-#projects .eachProject .firstProject .projectInfo ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-}
-#projects .eachProject .firstProject .projectInfo ul li {
-  list-style: none;
-  margin-left: 10px;
-  color: #67fcb9;
-  background-color: #e587c6;
-  padding: 0 3px;
-  border-radius: 3px;
-}
-#projects .eachProject .firstProject .projectInfo button {
-  font-size: 35px;
-  font-size: 1.75rem;
-  background-color: #e587c6;
-  border: transparent;
-  border-radius: 8%;
-  float: right;
-  margin: 15px 0 0 15px;
-}
-#projects .eachProject .firstProject .projectInfo button:hover, #projects .eachProject .firstProject .projectInfo button:focus, #projects .eachProject .firstProject .projectInfo button:active {
-  background-color: #d7ff49;
-}
-#projects .eachProject .firstProject .projectInfo button a {
-  text-decoration: none;
-  color: #67fcb9;
-  background-color: #e587c6;
-}
-#projects .eachProject .firstProject .projectInfo button a:hover, #projects .eachProject .firstProject .projectInfo button a:focus, #projects .eachProject .firstProject .projectInfo button a:active {
-  font-weight: 700;
-  color: #263E31;
-  background-color: #d7ff49;
-}
 #projects .eachProject .secondProject {
-  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -675,6 +648,9 @@ body {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
+#projects .eachProject .secondProject .overlay {
+  padding: 15px 20px;
+}
 #projects .eachProject .secondProject .secondMockupImg img {
   border-radius: 3%;
   width: 600px;
@@ -682,17 +658,32 @@ body {
 #projects .eachProject .secondProject .projectInfo {
   margin: 30px 40px 0 20px;
 }
-#projects .eachProject .secondProject .projectInfo h3 {
+#projects .eachProject .firstProject .overlay, #projects .eachProject .secondProject .overlay {
+  display: none;
+  cursor: pointer;
+  opacity: 1;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 12px;
+}
+#projects .eachProject .firstProject h3, #projects .eachProject .secondProject h3 {
   margin: 0;
   display: block;
 }
-#projects .eachProject .secondProject .projectInfo ul {
+#projects .eachProject .firstProject ul, #projects .eachProject .secondProject ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
 }
-#projects .eachProject .secondProject .projectInfo ul li {
+#projects .eachProject .firstProject ul li, #projects .eachProject .secondProject ul li {
   list-style: none;
   margin-left: 10px;
   color: #67fcb9;
@@ -700,24 +691,25 @@ body {
   padding: 0 3px;
   border-radius: 3px;
 }
-#projects .eachProject .secondProject .projectInfo button {
+#projects .eachProject .firstProject button, #projects .eachProject .secondProject button {
   font-size: 35px;
   font-size: 1.75rem;
   background-color: #e587c6;
   border: transparent;
   border-radius: 8%;
   float: right;
+  padding: 10px 15px;
   margin: 25px 15px 0 0;
 }
-#projects .eachProject .secondProject .projectInfo button:hover, #projects .eachProject .secondProject .projectInfo button:focus, #projects .eachProject .secondProject .projectInfo button:active {
+#projects .eachProject .firstProject button:hover, #projects .eachProject .firstProject button:focus, #projects .eachProject .firstProject button:active, #projects .eachProject .secondProject button:hover, #projects .eachProject .secondProject button:focus, #projects .eachProject .secondProject button:active {
   background-color: #d7ff49;
 }
-#projects .eachProject .secondProject .projectInfo button a {
+#projects .eachProject .firstProject button a, #projects .eachProject .secondProject button a {
   text-decoration: none;
   color: #67fcb9;
   background-color: #e587c6;
 }
-#projects .eachProject .secondProject .projectInfo button a:hover, #projects .eachProject .secondProject .projectInfo button a:focus, #projects .eachProject .secondProject .projectInfo button a:active {
+#projects .eachProject .firstProject button a:hover, #projects .eachProject .firstProject button a:focus, #projects .eachProject .firstProject button a:active, #projects .eachProject .secondProject button a:hover, #projects .eachProject .secondProject button a:focus, #projects .eachProject .secondProject button a:active {
   font-weight: 700;
   color: #263E31;
   background-color: #d7ff49;
@@ -759,6 +751,12 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #projects .eachProject {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #projects .eachProject .firstProject, #projects .eachProject .secondProject {
     position: relative;
     margin: 0 auto;
@@ -772,23 +770,14 @@ body {
     margin: 0 auto;
     width: 705px;
   }
-  #projects .eachProject .firstProject .overlay, #projects .eachProject .secondProject .overlay {
-    cursor: pointer;
-    opacity: 1;
-    position: absolute;
-    display: none;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 2;
-    -webkit-transition: 0.3s ease;
-    transition: 0.3s ease;
+  #projects .eachProject .firstProject .overlay {
     padding: 70px;
-    border-radius: 12px;
   }
   #projects .eachProject .secondProject {
     margin-top: 100px;
+  }
+  #projects .eachProject .secondProject .overlay {
+    padding: 50px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -844,62 +833,48 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  #projects .eachProject {
+    margin: 0 auto;
+  }
+  #projects .eachProject .firstProject h3, #projects .eachProject .secondProject h3 {
+    font-size: 30px;
+    font-size: 1.5rem;
+  }
+  #projects .eachProject .firstProject p, #projects .eachProject .secondProject p {
+    display: none;
+  }
+  #projects .eachProject .firstProject ul, #projects .eachProject .secondProject ul {
+    font-size: 20px;
+    font-size: 1rem;
+  }
+  #projects .eachProject .firstProject ul li, #projects .eachProject .secondProject ul li {
+    font-size: 20px;
+    font-size: 1rem;
+    padding: 5px 4px 0px;
+  }
+  #projects .eachProject .firstProject button, #projects .eachProject .secondProject button {
+    padding: 0px 6px 3px;
+  }
+  #projects .eachProject .firstProject button a, #projects .eachProject .secondProject button a {
+    font-size: 20px;
+    font-size: 1rem;
+  }
   #projects .eachProject .firstProject .firstMockupImg img {
     width: 450px;
-    margin-left: -63px;
+    margin-left: -65px;
   }
   #projects .eachProject .firstProject .overlay {
     width: 450px;
     padding: 40px;
-    margin-left: -80px;
-  }
-  #projects .eachProject .firstProject .overlay h3 {
-    font-size: 30px;
-    font-size: 1.5rem;
-  }
-  #projects .eachProject .firstProject .overlay p {
-    display: none;
-  }
-  #projects .eachProject .firstProject .overlay ul {
-    font-size: 20px;
-    font-size: 1rem;
-  }
-  #projects .eachProject .firstProject .overlay ul li {
-    font-size: 20px;
-    font-size: 1rem;
-    padding: 0;
-  }
-  #projects .eachProject .firstProject .overlay button a {
-    font-size: 20px;
-    font-size: 1rem;
+    margin-left: -65px;
   }
   #projects .eachProject .secondProject .secondMockupImg img {
     width: 450px;
-    margin-right: -63px;
+    margin-left: -62px;
   }
   #projects .eachProject .secondProject .overlay {
     width: 450px;
     padding: 40px;
-    margin-right: -80px;
-  }
-  #projects .eachProject .secondProject .overlay h3 {
-    font-size: 30px;
-    font-size: 1.5rem;
-  }
-  #projects .eachProject .secondProject .overlay p {
-    display: none;
-  }
-  #projects .eachProject .secondProject .overlay ul {
-    font-size: 20px;
-    font-size: 1rem;
-  }
-  #projects .eachProject .secondProject .overlay ul li {
-    font-size: 20px;
-    font-size: 1rem;
-    padding: 0;
-  }
-  #projects .eachProject .secondProject .overlay button a {
-    font-size: 20px;
-    font-size: 1rem;
+    margin-left: -62px;
   }
 }
