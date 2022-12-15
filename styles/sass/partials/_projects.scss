@@ -47,6 +47,19 @@
         } // END .secondProject
         
         .firstProject, .secondProject {
+
+            .firstMockupImg, .secondMockupImg {
+                cursor: pointer;
+
+                img { 
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        border: solid 5px #e686fb;
+                        border-radius: 15px;
+                    }
+                }
+            }
             .overlay {
                 display: none;
                 cursor: pointer;
@@ -110,7 +123,7 @@
                         background-color: #d7ff49;
                     }
                 }
-            }           
-        }
-    }
-}
+            } // END button          
+        } // END .firstProject, .secondProject
+    } // END .eachProject
+} // END #projects

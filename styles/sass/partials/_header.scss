@@ -17,10 +17,10 @@ header {
             }
         }      
         .pointer {
-            @include fontSize(80);
+            @include fontSize(100);
             a {
                 i {               
-                    margin: 0 0 0 150px;
+                    margin-left: 90px;
                     position: absolute;
                     bottom: 0;                    
                     color: #d7ff49;
