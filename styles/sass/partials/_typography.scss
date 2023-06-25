@@ -6,9 +6,9 @@ body {
 }
 
 nav {
-    @include fontSize(30);
+    @include fontSize(40);
 
-    ul {
+    ul {   
         li {
             &:hover,
             &:focus,
@@ -44,10 +44,14 @@ h2 {
 }
 
 h3 {
-    @include fontSize(35);
+    @include fontSize(30);
     margin: 0;
 }
 
 button {
     font-family: inherit;
+}
+
+p {
+    @include fontSize(20);
 }

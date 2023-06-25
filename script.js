@@ -2,10 +2,11 @@ AOS.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     const openHamburgerMenuButton = document.querySelector('.menuOpen');
-
     const menuCloseButton = document.querySelector('.menuClose');
-
     const menu = document.querySelector('.slideOutNav');
+    const home = document.querySelector('.homeButton');
+    const about = document.querySelector('.aboutButton');
+    const projects = document.querySelector('.projectsButton');
 
     openHamburgerMenuButton.addEventListener('click', (e) => {
         menu.classList.add('open');
@@ -14,7 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
     menuCloseButton.addEventListener('click', (e) => {
         menu.classList.remove('open');
     })
-
+    home.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    });
+    about.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    });
+    projects.addEventListener('click', (e) => {
+      menu.classList.remove('open');
+    });
 }) // END hamburger nav
 
 const image = document.querySelectorAll('.image');
