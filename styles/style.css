@@ -527,13 +527,14 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 80px;
 }
 #about .aboutMeDetails .aboutPhoto {
   width: 100%;
 }
 #about .aboutMeDetails .aboutPhoto img {
-  width: 300px;
   height: 550px;
+  margin-top: 10px;
 }
 #about .aboutMeDetails .aboutMeInfo button {
   display: none;
@@ -625,30 +626,22 @@ footer {
 }
 
 #projects {
-  margin: 200px 0 300px;
-}
-#projects .eachProject {
-  padding-bottom: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  margin: 300px 0 300px;
 }
 #projects .eachProject .firstProject {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 50px;
 }
 #projects .eachProject .firstProject .overlay {
   padding: 15px 20px;
-  width: 95%;
+  width: 100%;
 }
 #projects .eachProject .firstProject .firstMockupImg img {
   border-radius: 3%;
   height: 100%;
-  width: 95%;
+  width: 100%;
 }
 #projects .eachProject .firstProject .projectInfo {
   margin: 50px 0 0 30px;
@@ -664,15 +657,15 @@ footer {
 }
 #projects .eachProject .secondProject .overlay {
   padding: 15px 20px;
-  width: 95%;
+  width: 100%;
 }
 #projects .eachProject .secondProject .secondMockupImg img {
   border-radius: 3%;
   height: 100%;
-  width: 95%;
+  width: 100%;
 }
 #projects .eachProject .secondProject .projectInfo {
-  margin: 30px 40px 0 20px;
+  margin: 50px 0 0 30px;
 }
 #projects .eachProject .firstProject .firstMockupImg, #projects .eachProject .firstProject .secondMockupImg, #projects .eachProject .secondProject .firstMockupImg, #projects .eachProject .secondProject .secondMockupImg {
   cursor: pointer;
@@ -689,6 +682,7 @@ footer {
   display: none;
   height: 100%;
   margin: 0 auto;
+  padding: 70px;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2;
   -webkit-transition: 0.3s ease;
@@ -700,12 +694,13 @@ footer {
   display: block;
 }
 #projects .eachProject .firstProject ul, #projects .eachProject .secondProject ul {
-  font-size: 20px;
-  font-size: 1rem;
+  font-size: 25px;
+  font-size: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0;
+  margin-bottom: 0;
 }
 #projects .eachProject .firstProject ul li, #projects .eachProject .secondProject ul li {
   font-size: 20px;
@@ -714,18 +709,20 @@ footer {
   margin-left: 5px;
   color: #67fcb9;
   background-color: #e587c6;
-  padding: 0px;
+  padding: 0px 5px;
   border-radius: 3px;
   margin-top: auto;
   margin-bottom: auto;
 }
 #projects .eachProject .firstProject button, #projects .eachProject .secondProject button {
+  font-size: 25px;
+  font-size: 1.25rem;
   background-color: #e587c6;
   border: transparent;
   border-radius: 8%;
   float: right;
   padding: 5px;
-  margin: 3px;
+  margin: 20px 10px;
 }
 #projects .eachProject .firstProject button:hover, #projects .eachProject .firstProject button:focus, #projects .eachProject .firstProject button:active, #projects .eachProject .secondProject button:hover, #projects .eachProject .secondProject button:focus, #projects .eachProject .secondProject button:active {
   background-color: #d7ff49;
@@ -760,12 +757,9 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #about .aboutMeDetails .aboutPhoto {
-    display: center;
-    margin: 0 auto;
-  }
   #about .aboutMeDetails .aboutPhoto img {
-    width: 400px;
+    margin-left: 22%;
+    max-width: 400px;
     height: 700px;
     margin-bottom: 50px;
   }
@@ -777,51 +771,32 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #projects .eachProject {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  #projects .eachProject .firstProject, #projects .eachProject .secondProject {
-    position: relative;
-    margin: 0 auto;
-  }
-  #projects .eachProject .firstProject .firstMockupImg img, #projects .eachProject .firstProject .secondMockupImg img, #projects .eachProject .secondProject .firstMockupImg img, #projects .eachProject .secondProject .secondMockupImg img {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: center;
-    margin: 0 auto;
-  }
-  #projects .eachProject .firstProject .overlay {
-    padding: 70px;
-  }
-  #projects .eachProject .secondProject {
-    margin-top: 100px;
-  }
-  #projects .eachProject .secondProject .overlay {
-    padding: 50px;
-  }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
   header {
     margin-top: 400px;
   }
   header #home h1 {
-    font-size: 70px;
-    font-size: 3.5rem;
+    font-size: 50px;
+    font-size: 2.5rem;
   }
   header #home span {
-    font-size: 40px;
-    font-size: 2rem;
+    font-size: 20px;
+    font-size: 1rem;
   }
   #about .aboutMeDetails {
     position: relative;
   }
+  #about .aboutMeDetails .aboutPhoto {
+    margin-bottom: 50px;
+  }
   #about .aboutMeDetails .aboutPhoto img {
+    margin: 0;
     width: 100%;
     height: 100%;
+  }
+  #about .aboutMeDetails .aboutMeInfo {
+    margin-bottom: 300px;
   }
   #about .aboutMeDetails .aboutMeInfo button {
     display: block;
@@ -844,10 +819,9 @@ footer {
     background-color: rgba(248, 166, 228, 0.9);
     left: -100px;
     position: fixed;
-    z-index: 100;
+    z-index: 999;
     width: 480px;
-    height: 120vh;
-    margin: 150px 0;
+    height: 100%;
     padding-top: 50px;
   }
   #about .skill .skillList {
@@ -862,21 +836,18 @@ footer {
   #projects .eachProject {
     margin: 0 auto;
   }
+  #projects .eachProject .firstProject {
+    margin-bottom: 150px;
+  }
   #projects .eachProject .firstProject h3, #projects .eachProject .secondProject h3 {
-    font-size: 30px;
-    font-size: 1.5rem;
+    font-size: 20px;
+    font-size: 1rem;
   }
   #projects .eachProject .firstProject p, #projects .eachProject .secondProject p {
     display: none;
   }
   #projects .eachProject .firstProject ul, #projects .eachProject .secondProject ul {
-    font-size: 20px;
-    font-size: 1rem;
-  }
-  #projects .eachProject .firstProject ul li, #projects .eachProject .secondProject ul li {
-    font-size: 20px;
-    font-size: 1rem;
-    padding: 5px 4px 0px;
+    display: none;
   }
   #projects .eachProject .firstProject button, #projects .eachProject .secondProject button {
     padding: 0px 6px 3px;
@@ -885,17 +856,17 @@ footer {
     font-size: 20px;
     font-size: 1rem;
   }
-  #projects .eachProject .firstProject .firstMockupImg {
-    width: 100%;
+  #projects .eachProject .firstProject .overlay, #projects .eachProject .secondProject .overlay {
+    background-color: transparent;
+    display: inline-block;
     padding: 0;
   }
-  #projects .eachProject .firstProject .overlay {
-    width: 100%;
+  #projects .eachProject .firstMockupImg img, #projects .eachProject .secondMockupImg img {
+    display: none;
   }
-  #projects .eachProject .secondProject .secondMockupImg img {
-    width: 100%;
-  }
-  #projects .eachProject .secondProject .overlay p {
-    margin: 0;
+  footer {
+    font-size: 16px;
+    font-size: 0.8rem;
+    padding: 50px 0;
   }
 }

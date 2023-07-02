@@ -30,10 +30,11 @@
         .aboutMeDetails {
             flex-direction: column;
             .aboutPhoto {
-                    display: center;
-                    margin: 0 auto;
+                    // display: center;
+                    // margin: 0 auto;
                     img {
-                        width: 400px;
+                        margin-left: 22%;
+                        max-width: 400px;
                         height: 700px;
                         margin-bottom: 50px;
                     }
@@ -50,62 +51,36 @@
         } //END .skill
     } // END #about
 // END ABOUT ---------------------------------
-    #projects {
-        .eachProject {     
-            flex-direction: column;       
-            .firstProject, .secondProject {
-                position: relative;
-                margin: 0 auto;
-                
-                .firstMockupImg, .secondMockupImg {                  
-                    img {                        
-                        align-items: center;
-                        display: center;
-                        margin: 0 auto;
-                    }                    
-                }                             
-            } // END .firstProject, .secondProject
-
-            .firstProject {
-                .overlay {
-                    padding: 70px;
-                }
-            }
-            .secondProject {
-                margin-top: 100px;
-
-                .overlay {
-                    padding: 50px;
-                }
-            }
-        } // END .eachProject
-    } // END #projects
 } // END media screen max-width: 1024px
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 320px) {
    header {
         margin-top: 400px;
         #home {            
             h1 {
-                @include fontSize(70);                
+                @include fontSize(50);                
             }           
             span {
-                @include fontSize(40);
+                @include fontSize(20);
             }
         } // END #home
     } // END Header
 
     #about {
         .aboutMeDetails {
-            position: relative;
+            position: relative;            
             .aboutPhoto {
+                margin-bottom: 50px;
                 img {
+                    margin: 0;
                     width: 100%;
                     height: 100%;
                 }
             }
             .aboutMeInfo {
+                margin-bottom: 300px;
+
                 button {
                     display: block;
                     margin: 0 auto;
@@ -131,10 +106,9 @@
                 background-color: rgba(248, 166, 228, 0.9);
                 left: -100px;
                 position: fixed;
-                z-index: 100;                    
+                z-index: 999;                    
                 width: 480px;
-                height: 120vh;
-                margin: 150px 0;
+                height: 100%;
                 padding-top: 50px;
             }
         } // END .aboutMeDetails
@@ -153,57 +127,45 @@
     #projects {
         .eachProject {
             margin: 0 auto;
+
+            .firstProject {
+                margin-bottom: 150px;
+            }
             
             .firstProject, .secondProject {
                 h3 {
-                        @include fontSize(30);
-                    }
-                
-                    p {
-                        display: none;
-                    }
-                
-                    ul {
                         @include fontSize(20);
-                
-                        li {
-                            @include fontSize(20);
-                            padding: 5px 4px 0px;
-                        }
                     }
-                
-                    button {
-                        padding: 0px 6px 3px;
-                        a {
-                            @include fontSize(20);
-                            
-                        }
-                    }
-            }
-
-            .firstProject {               
-                .firstMockupImg {
-                        width: 100%;
-                        padding: 0;                   
-                }    
-                
-                .overlay {
-                    width: 100%;                     
-                } 
-            }
-
-            .secondProject {
-                .secondMockupImg {
-                    img {
-                        width: 100%;
+                p {
+                    display: none;
+                }
+            
+                ul {
+                    display: none;
+                }
+            
+                button {
+                    padding: 0px 6px 3px;
+                    a {
+                        @include fontSize(20);                        
                     }
                 }
                 .overlay {
-                    p {
-                        margin: 0;
-                    }
+                    background-color: transparent;
+                    display: inline-block;
+                    padding: 0;
                 }
-            } // END .secondProject           
-        }
+            }
+
+            .firstMockupImg, .secondMockupImg {               
+                img {
+                    display: none;
+                }               
+            }                         
+        }        
     }
-} // END media screen max-width: 480px}
+    footer {
+        @include fontSize(16);
+        padding: 50px 0;
+    }
+} // END media screen max-width: 320px}

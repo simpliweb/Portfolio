@@ -5,13 +5,14 @@
 
     .aboutMeDetails {      
         display: flex;
+        margin-bottom: 80px;
 
         .aboutPhoto {
             width: 100%;
-            img {
-                
-                width: 300px;
+            
+            img {            
                 height: 550px;
+                margin-top: 10px;
             }
         }
         .aboutMeInfo {
